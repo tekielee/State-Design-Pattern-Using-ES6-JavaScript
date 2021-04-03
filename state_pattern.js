@@ -44,7 +44,7 @@ class MonthSetupState {
 	}
 	
 	selectValue() {
-		this.clockSetup.setState(this.clockSetup.getDaySetupState());
+		return this.clockSetup.setState(this.clockSetup.getDaySetupState());
 	}
 	
 	getInstructions() {
@@ -102,7 +102,7 @@ class HourSetupState {
 	}
 	
 	selectValue() {
-		this.clockSetup.setState(this.clockSetup.getMinuteSetupState());
+		return this.clockSetup.setState(this.clockSetup.getMinuteSetupState());
 	}
 	
 	getInstructions() {
@@ -131,7 +131,7 @@ class MinuteSetupState {
 	}
 	
 	selectValue() {
-		this.clockSetup.setState(this.clockSetup.getFinishedSetupState());
+		return this.clockSetup.setState(this.clockSetup.getFinishedSetupState());
 	}
 	
 	getInstructions() {
