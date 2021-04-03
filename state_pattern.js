@@ -226,7 +226,7 @@ class ClockSetup {
 		const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 		const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-		return (this.yearState.getSelectedValue() + ' ' + months[this.monthState.getSelectedValue()] + ' ' + days[this.dayState.getSelectedValue()] + ' ' + this.hourState.getSelectedValue() + ':' + this.minuteState.getSelectedValue());
+		return (this.yearState.getSelectedValue() + ' ' + months[this.monthState.getSelectedValue()] + ' ' + days[this.dayState.getSelectedValue() - 1] + ' ' + this.hourState.getSelectedValue() + ':' + this.minuteState.getSelectedValue());
 	}
 }
 
@@ -240,7 +240,6 @@ clockSetup.rotateKnobRight();
 clockSetup.rotateKnobRight();
 clockSetup.pushKnob(); // 2 months on
 
-clockSetup.rotateKnobRight();
 clockSetup.rotateKnobRight();
 clockSetup.rotateKnobRight();
 clockSetup.pushKnob(); // 3 days on
